@@ -1,0 +1,8 @@
+{
+  "name": "docker-shellcheck",
+  "tagline": "ShellCheck is a static anaylsis tool that automatically finds bugs in your shell scripts.",
+  "license": {
+    "name": "MIT"
+  },
+  "tags": ["docker", "shellcheck", "lint"]
+}
