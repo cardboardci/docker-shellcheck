@@ -1,4 +1,4 @@
-FROM koalaman/shellcheck:v0.6.0 AS official 
+FROM koalaman/shellcheck:v0.7.0 AS official
 FROM alpine:3.10.3
 COPY --from=official /bin/shellcheck /bin/shellcheck
 
