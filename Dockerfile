@@ -1,5 +1,9 @@
 FROM koalaman/shellcheck:v0.7.0 AS official
-FROM alpine:3.10.3
+FROM cardboardci/ci-core:focal
+USER root
+
+ARG DEBIAN_FRONTEND=noninteractive
+
 COPY --from=official /bin/shellcheck /bin/shellcheck
 
 ##
