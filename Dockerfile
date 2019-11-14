@@ -1,10 +1,15 @@
-FROM koalaman/shellcheck:v0.7.0 AS official
 FROM cardboardci/ci-core:focal
 USER root
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-COPY --from=official /bin/shellcheck /bin/shellcheck
+COPY provision/pkglist /cardboardci/pkglist
+RUN apt-get update \
+    && xargs -a /cardboardci/pkglist apt-get install --no-install-recommends -y \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+USER cardboardci
 
 ##
 ## Image Metadata
