@@ -1,0 +1,18 @@
+slug: docker-shellcheck
+description: ShellCheck is a static anaylsis tool that automatically finds bugs in your shell scripts.
+project: cardboardci
+namespace: docker
+status: archived
+icon: icon.svg
+license:
+  type: MIT
+  content: Jonathan Beverly <jrbeverly>
+  year: 2019
+topics: |-
+  [
+    "dockerfile",
+    "shell",
+    "linter",
+    "static-analysis",
+    "developer-tools"
+  ]
